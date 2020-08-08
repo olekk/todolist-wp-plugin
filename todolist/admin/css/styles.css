@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap);
+.mybody {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html.wp-toolbar {
+  overflow-x: hidden;
+}
+
+.mylist {
+  display: inline-flex;
+  flex-direction: column;
+  height: fit-content;
+  border: 2px solid #dcdcdd;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.25);
+  margin: 40px 10px;
+}
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+  background-color: white;
+  height: 55px;
+  border-bottom: 2px solid #e7ebee;
+}
+
+.row:last-child {
+  border: none;
+}
+
+.row__status {
+  width: 80px;
+  box-sizing: border-box;
+  margin-right: 6px;
+  border-right: 2px solid #f2e3de;
+  padding: 20px;
+}
+
+.row__status input {
+  margin-left: calc(50% - 10px);
+  border-radius: 1px;
+  border-color: #6bb3cb;
+}
+
+.row__status input:checked {
+  filter: grayscale(100%);
+}
+
+.row__content {
+  border-left: 2px solid #f2e3de;
+  flex-grow: 1;
+  padding: 20px 0 20px 20px;
+}
+
+.row__content input, .row__content input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: inherit;
+  font-size: 16px;
+  padding: 0;
+  margin-top: -6px;
+  width: 100%;
+}
+
+.row__act {
+  box-sizing: border-box;
+  text-align: right;
+  margin: 20px 5px;
+}
+
+.row__act span {
+  font-size: 25px;
+  padding-right: 10px;
+}
+
+.row__act [title="Delete"]:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.row__act [title="Save"]:hover, .row__act [title~="Add"]:hover {
+  color: #6cb2cc;
+  cursor: pointer;
+}
+
+.row__act [title="Cancel"]:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.row_hidden {
+  display: none;
+}
+
+.row_hover {
+  background-color: #f3f3f3;
+}
+
+/* small tablets */
+@media screen and (min-width: 783px) {
+  .row {
+    min-width: 500px;
+    height: 64px;
+  }
+  .row__status input {
+    transform: scale(2);
+    margin-left: calc(50% - 8px);
+  }
+  .row__content input, .row__content input:focus {
+    font-size: 20px;
+  }
+  .row__act {
+    width: 70px;
+  }
+  .row__act span {
+    font-size: 30px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .mylist {
+    transform: scale(1.5);
+  }
+}

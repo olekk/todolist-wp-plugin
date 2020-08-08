@@ -1,0 +1,131 @@
+
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap);
+
+.mybody {
+    font-family: 'Open Sans', sans-serif;
+
+    width: 100%;
+    min-height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html.wp-toolbar {
+    overflow-x: hidden;
+}
+
+.mylist {
+    display: inline-flex;
+    flex-direction: column;
+    height: fit-content;
+    border: 2px solid rgb(220, 220, 221);
+    box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.25);
+    margin: 40px 10px;
+}
+
+.row {
+    box-sizing: border-box;
+    display: flex;
+    background-color: white;
+    height: 55px;
+    border-bottom: 2px solid rgb(231, 235, 238);
+    &:last-child {border: none;}
+    &__status {
+        width: 80px;
+        box-sizing: border-box;
+        margin-right: 6px;
+        border-right: 2px solid rgb(242,227,222);
+        padding: 20px;
+        input {
+            // transform: scale(1.2);
+            margin-left: calc(50% - 10px);
+            border-radius: 1px;
+            border-color: rgb(107,179,203);
+            &:checked {
+                filter: grayscale(100%);
+            }
+        }
+
+    }
+    &__content {
+        border-left: 2px solid rgb(242,227,222);
+        flex-grow: 1;
+        padding: 20px 0 20px 20px;
+        input, input:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+            background-color: inherit;
+            font-size: 16px;
+            padding: 0;
+            margin-top: -6px;
+            width: 100%;
+        }
+    }
+    &__act {
+        box-sizing: border-box;
+        text-align: right;
+        margin: 20px 5px;
+        span {
+            font-size: 25px;
+            padding-right: 10px;
+        }
+        [title="Delete"]:hover {
+            color: red;
+            cursor: pointer;
+        }
+        [title="Save"]:hover, [title~="Add"]:hover {
+            color: rgb(108, 178, 204);
+            cursor: pointer;
+        }
+        [title="Cancel"]:hover {
+            color: orange;
+            cursor: pointer;
+        }
+        
+    }
+    
+    &_hidden{
+        display: none;
+    }
+
+    &_hover {
+        background-color: #f3f3f3;
+    }
+}
+
+/* small tablets */
+@media screen and (min-width: 783px) {
+    .row {
+        min-width: 500px;
+        height: 64px;
+        &__status {
+            input {
+                transform: scale(2);
+                margin-left: calc(50% - 8px);
+            }
+        }
+
+        &__content {
+            input, input:focus {
+                font-size: 20px;
+            }
+        }
+        &__act {
+            width: 70px;
+
+            span {
+                font-size: 30px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .mylist {
+        transform: scale(1.5);
+    }
+}
