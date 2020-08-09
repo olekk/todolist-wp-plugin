@@ -34,7 +34,7 @@ html.wp-toolbar {
 }
 
 .row__status {
-  width: 80px;
+  flex: 0 0 80px;
   box-sizing: border-box;
   margin-right: 6px;
   border-right: 2px solid #f2e3de;
@@ -70,8 +70,10 @@ html.wp-toolbar {
 
 .row__act {
   box-sizing: border-box;
-  text-align: right;
   margin: 20px 5px;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-items: right;
 }
 
 .row__act span {
@@ -114,9 +116,6 @@ html.wp-toolbar {
   }
   .row__content input, .row__content input:focus {
     font-size: 20px;
-  }
-  .row__act {
-    width: 70px;
   }
   .row__act span {
     font-size: 30px;
